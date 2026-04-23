@@ -54,10 +54,11 @@ function preload() {
 function create() {
   this.add.image(400, 300, 'sky');
   platforms = this.physics.add.staticGroup();
-  platforms.create(400, 785, 'ground').setScale(2).refreshBody();
+  platforms.create(500, 606, 'ground').setScale(2).refreshBody();
   platforms.create('ground');
   platforms.create( 'ground');
-  platforms.create(750, 220, 'ground');
+  platforms.create(1250, 380, 'ground');
+  platforms.create(-250, 300, 'ground');
   
   player = this.physics.add.sprite(40, 495, 'dude');
   player.setCollideWorldBounds(true);
@@ -112,7 +113,7 @@ function update() {
   };
   
   if (cursors.up.isDown && player.body.blocked.down)  {
-    player.setVelocityY(-500);
+    player.setVelocityY(-600);
   };
 };
 
